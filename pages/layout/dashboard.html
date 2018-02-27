@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard | eClaim</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+  <!-- Fileinput -->
+  <link href="../../plugins/fileinput/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
+  <link rel="stylesheet" href="../../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="../../plugins/datatable/datatables.min.css"/>
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .dt-button-collection li.buttons-columnVisibility a:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      transform: translate(0,0);
+      content: "\f00d";
+      margin-right: 13px;
+    }
+
+    .dt-button-collection li.buttons-columnVisibility.active a:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      transform: translate(0,0);
+      content: "\f00c";
+      margin-right: 10px;
+    }
+    .box-header > .datatable-box-tools {
+      color: #ffffff;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+  </style>
+</head>
+<!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
+<!-- the fixed layout is not compatible with sidebar-mini -->
+<body class="hold-transition skin-blue fixed sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>e</b>CL</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>e</b>Claim</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-comment-o fa-lg"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 conversation</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user1-128x128.png" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o fa-lg"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+					<li>
+						<a href="#">
+						  <i class="fa fa-users fa-lg text-yellow"></i> 5 new members joined today
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-money fa-lg text-aqua"></i> 2 claims payment initiated
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						  <i class="fa fa-file-text-o fa-lg text-yellow"></i> 8 claims pending approval
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						  <i class="fa fa-bullhorn fa-lg text-aqua"></i> 1 announcement waiting
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						  <i class="fa fa-check fa-lg text-green"></i> 9 claims approved
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						  <i class="fa fa-bug fa-lg text-red"></i> 3 feedback recieved
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						  <i class="fa fa-user fa-lg text-aqua"></i> user profile updated
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-money fa-lg text-yellow"></i> bank account number changed
+						</a>
+					</li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o fa-lg"></i>
+              <span class="label label-danger">2</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 2 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+					<li>
+						<a href="#">
+						  <i class="fa fa-file-text-o fa-lg text-yellow"></i> 16 draft claims to <b>POST</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						  <i class="fa fa-file-text-o fa-lg text-yellow"></i> 264 pending claims to <b>APPROVE</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						  <i class="fa fa-users fa-lg text-yellow"></i> 3 users to <b>ACTIVATE</b>
+						</a>
+					</li>
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../../dist/img/user1-128x128.png" class="user-image" alt="User Image">
+              <span class="hidden-xs"><span id="top-bar-user-name-display"><!-- Name will be displayed from #users-name-display --></span>  <i class="caret"></i></span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../../dist/img/user1-128x128.png" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Settings</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Customize</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Notification</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat"><i class="fa fa-user fa-fw"></i>Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat"><i class="fa fa-sign-out fa-fw"></i>Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#"><i class="fa fa-gears fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-sign-out fa-lg"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../../dist/img/user1-128x128.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p id="users-name-display">Alexander Pierce</p>
+		  <!--<a href="#"><i class="fa fa-circle text-success"></i> Approver</a>-->
+		  <a href="#"><i class="fa fa-circle text-danger"></i> User</a>
+        </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">MAIN MENU</li>
+		<li><a href="#"><i class="fa fa-home fa-lg"></i> <span><big>Home</big></span></a></li>
+		<li><a href="#"><i class="fa fa-plus fa-lg"></i> <span><big>New</big></span></a></li>
+		<li><a href="#"><i class="fa fa-exclamation-circle fa-lg"></i> <span><big>Pending</big></span></a></li>
+		<li><a href="#"><i class="fa fa-pencil fa-lg"></i> <span><big>Processing</big></span></a></li>
+		<li><a href="#"><i class="fa fa-check fa-lg"></i> <span><big>Approval</big></span></a></li>
+		<li><a href="#"><i class="fa fa-dollar fa-lg"></i> <span><big>Paid</big></span></a></li>
+		<li class="header">OVERVIEW</li>
+		<li><a href="#"><i class="fa fa-search fa-lg"></i> <span><big>All</big></span></a></li>
+		<li><a href="#"><i class="fa fa-bar-chart-o fa-lg"></i> <span><big>Reports</big></span></a></li>
+        <li class="header">HELP</li>
+		<li><a href="#"><i class="fa fa-anchor fa-lg"></i> <span><big>Guidelines</big></span></a></li>        
+        <li><a href="#"><i class="fa fa-book fa-lg"></i> <span><big>User Manual</big></span></a></li>
+		<li><a href="#"><i class="fa fa-bug fa-lg"></i> <span><big>Feedback</big></span></a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Welcome to Expense Claim Web Application.</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#">Layout</a></li>
+        <li class="active">Fixed</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+		<!-- Dashboard count -->
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-aqua"><i class="ion ion-document"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-text">Draft</span>
+						<span class="info-box-number">90</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-yellow"><i class="ion ion-edit"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-text">Processing</span>
+						<span class="info-box-number">41,410</span>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix visible-sm-block"></div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-green"><i class="ion ion-android-done"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-text">Approved</span>
+						<span class="info-box-number">76</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-red"><i class="ion ion-android-close"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-text">Rejected</span>
+						<span class="info-box-number">0</span>
+					</div>
+				</div>
+			</div>
+    </div>
+    <!-- /.box -->
+    <div class="row">
+      <div class="col-md-4">
+        <!-- DIRECT CHAT -->
+        <div class="box box-solid box-warning direct-chat direct-chat-warning">
+          <div class="box-header with-border">
+            <h3 class="box-title">Conversations</h3>
+
+            <div class="box-tools pull-right">
+              <span data-toggle="tooltip" title="3 New Messages" class="badge bg-purple">3</span>
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
+                <i class="fa fa-comments"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <!-- Conversations are loaded here -->
+            <div class="direct-chat-messages">
+              <!-- Message. Default to the left -->
+              <div class="direct-chat-msg">
+                <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                  <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                </div>
+                <!-- /.direct-chat-info -->
+                <img class="direct-chat-img" src="../../dist/img/user1-128x128.png" alt="message user image"><!-- /.direct-chat-img -->
+                <div class="direct-chat-text">
+                  Is this template really for free? That's unbelievable!
+                </div>
+                <!-- /.direct-chat-text -->
+              </div>
+              <!-- /.direct-chat-msg -->
+
+              <!-- Message to the right -->
+              <div class="direct-chat-msg right">
+                <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                  <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
+                </div>
+                <!-- /.direct-chat-info -->
+                <img class="direct-chat-img" src="../../dist/img/user1-128x128.png" alt="message user image"><!-- /.direct-chat-img -->
+                <div class="direct-chat-text">
+                  You better believe it!
+                </div>
+                <!-- /.direct-chat-text -->
+              </div>
+              <!-- /.direct-chat-msg -->
+
+              <!-- Message. Default to the left -->
+              <div class="direct-chat-msg">
+                <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                  <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span>
+                </div>
+                <!-- /.direct-chat-info -->
+                <img class="direct-chat-img" src="../../dist/img/user1-128x128.png" alt="message user image"><!-- /.direct-chat-img -->
+                <div class="direct-chat-text">
+                  Working with AdminLTE on a great new app! Wanna join?
+                </div>
+                <!-- /.direct-chat-text -->
+              </div>
+              <!-- /.direct-chat-msg -->
+
+              <!-- Message to the right -->
+              <div class="direct-chat-msg right">
+                <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                  <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
+                </div>
+                <!-- /.direct-chat-info -->
+                <img class="direct-chat-img" src="../../dist/img/user1-128x128.png" alt="message user image"><!-- /.direct-chat-img -->
+                <div class="direct-chat-text">
+                  I would love to.
+                </div>
+                <!-- /.direct-chat-text -->
+              </div>
+              <!-- /.direct-chat-msg -->
+
+            </div>
+            <!--/.direct-chat-messages-->
+
+            <!-- Contacts are loaded here -->
+            <div class="direct-chat-contacts">
+              <ul class="contacts-list">
+                <li>
+                  <a href="#">
+                    <img class="contacts-list-img" src="../../dist/img/user1-128x128.png" alt="User Image">
+
+                    <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Count Dracula
+                            <small class="contacts-list-date pull-right">2/28/2015</small>
+                          </span>
+                      <span class="contacts-list-msg">How have you been? I was...</span>
+                    </div>
+                    <!-- /.contacts-list-info -->
+                  </a>
+                </li>
+                <!-- End Contact Item -->
+                <li>
+                  <a href="#">
+                    <img class="contacts-list-img" src="../../dist/img/user1-128x128.png" alt="User Image">
+
+                    <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Sarah Doe
+                            <small class="contacts-list-date pull-right">2/23/2015</small>
+                          </span>
+                      <span class="contacts-list-msg">I will be waiting for...</span>
+                    </div>
+                    <!-- /.contacts-list-info -->
+                  </a>
+                </li>
+                <!-- End Contact Item -->
+                <li>
+                  <a href="#">
+                    <img class="contacts-list-img" src="../../dist/img/user1-128x128.png" alt="User Image">
+
+                    <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Nadia Jolie
+                            <small class="contacts-list-date pull-right">2/20/2015</small>
+                          </span>
+                      <span class="contacts-list-msg">I'll call you back at...</span>
+                    </div>
+                    <!-- /.contacts-list-info -->
+                  </a>
+                </li>
+                <!-- End Contact Item -->
+                <li>
+                  <a href="#">
+                    <img class="contacts-list-img" src="../../dist/img/user1-128x128.png" alt="User Image">
+
+                    <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Nora S. Vans
+                            <small class="contacts-list-date pull-right">2/10/2015</small>
+                          </span>
+                      <span class="contacts-list-msg">Where is your new...</span>
+                    </div>
+                    <!-- /.contacts-list-info -->
+                  </a>
+                </li>
+                <!-- End Contact Item -->
+                <li>
+                  <a href="#">
+                    <img class="contacts-list-img" src="../../dist/img/user1-128x128.png" alt="User Image">
+
+                    <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            John K.
+                            <small class="contacts-list-date pull-right">1/27/2015</small>
+                          </span>
+                      <span class="contacts-list-msg">Can I take a look at...</span>
+                    </div>
+                    <!-- /.contacts-list-info -->
+                  </a>
+                </li>
+                <!-- End Contact Item -->
+                <li>
+                  <a href="#">
+                    <img class="contacts-list-img" src="../../dist/img/user1-128x128.png" alt="User Image">
+
+                    <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Kenneth M.
+                            <small class="contacts-list-date pull-right">1/4/2015</small>
+                          </span>
+                      <span class="contacts-list-msg">Never mind I found...</span>
+                    </div>
+                    <!-- /.contacts-list-info -->
+                  </a>
+                </li>
+                <!-- End Contact Item -->
+              </ul>
+              <!-- /.contatcts-list -->
+            </div>
+            <!-- /.direct-chat-pane -->
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <form action="#" method="post">
+              <div class="input-group">
+                <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-warning btn-flat">Send</button>
+                    </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box box-solid box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Recent Claims</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body no-padding">
+              <table class="table">
+                <thead>
+                <tr>
+                  <th>Claim ID</th>
+                  <th>Type</th>
+                  <th class="text-center">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                  <td>Call of Duty IV</td>
+                  <td class="text-center"><span class="label label-success">Shipped</span></td>
+                </tr>
+                <tr>
+                  <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                  <td>Samsung Smart TV</td>
+                  <td class="text-center"><span class="label label-warning">Pending</span></td>
+                </tr>
+                <tr>
+                  <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                  <td>iPhone 6 Plus</td>
+                  <td class="text-center"><span class="label label-danger">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                  <td>Samsung Smart TV</td>
+                  <td class="text-center"><span class="label label-info">Processing</span></td>
+                </tr>
+                <tr>
+                  <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                  <td>Samsung Smart TV</td>
+                  <td class="text-center"><span class="label label-warning">Pending</span></td>
+                </tr>
+                <tr>
+                  <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                  <td>iPhone 6 Plus</td>
+                  <td class="text-center"><span class="label label-danger">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                  <td>Call of Duty IV</td>
+                  <td class="text-center"><span class="label label-success">Shipped</span></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>        
+      </div>
+      <div class="col-md-4">
+        <div class="box box-solid box-success">
+            <div class="box-header with-border">
+                <h3 class="box-title">Reimbursement</h3>  
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+              </div>
+              <div class="box-body no-padding">
+                  <table class="table table-striped">
+                    <tr>
+                      <th>Date</th>
+                      <th class="text-center">No. of Claims</th>
+                      <th class="text-right">Amount</th>
+                    </tr>
+                    <tr>
+                      <td>12/09/3487</td>
+                      <td class="text-center">15</td>
+                      <td class="text-right">$1200.00</td>
+                    </tr>
+                    <tr>
+                      <td>87/76/0987</td>
+                      <td class="text-center">28</td>
+                      <td class="text-right">$24,813.53</td>
+                    </tr>
+                    <tr>
+                      <td>87/76/8753</td>
+                      <td class="text-center">234</td>
+                      <td class="text-right">$10,390.90</td>
+                    </tr>
+                    <tr>
+                      <td>10/09/7653</td>
+                      <td class="text-center">56</td>
+                      <td class="text-right">$35,210.43</td>
+                    </tr>
+                    <tr>
+                        <td>12/09/3487</td>
+                        <td class="text-center">15</td>
+                        <td class="text-right">$1200.00</td>
+                      </tr>
+                      <tr>
+                        <td>87/76/0987</td>
+                        <td class="text-center">28</td>
+                        <td class="text-right">$24,813.53</td>
+                      </tr>
+                      <tr>
+                        <td>87/76/8753</td>
+                        <td class="text-center">234</td>
+                        <td class="text-right">$10,390.90</td>
+                      </tr>
+                  </table>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box box-solid box-danger">
+          <div class="box-header with-border">
+            <h3 class="box-title">Require Action</h3>    
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="box-body no-padding">
+            <table class="table">
+              <thead>
+              <tr>
+                <th>Claim ID</th>
+                <th>Type</th>
+                <th>Name</th>
+                <th class="text-center">Status</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                <td>Call of Duty IV</td>
+                <td>Andrew</td>
+                <td class="text-center"><span class="label label-success">Shipped</span></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                <td>Samsung Smart TV</td>
+                <td>Mathew</td>
+                <td class="text-center"><span class="label label-warning">Pending</span></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                <td>iPhone 6 Plus</td>
+                <td>Johnson</td>
+                <td class="text-center"><span class="label label-danger">Delivered</span></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                <td>Samsung Smart TV</td>
+                <td>Albert</td>
+                <td class="text-center"><span class="label label-info">Processing</span></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                <td>Samsung Smart TV</td>
+                <td>Paul</td>
+                <td class="text-center"><span class="label label-warning">Pending</span></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                <td>iPhone 6 Plus</td>
+                <td>Andrey</td>
+                <td class="text-center"><span class="label label-danger">Delivered</span></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                <td>Call of Duty IV</td>
+                <td>Vincent</td>
+                <td class="text-center"><span class="label label-success">Shipped</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+      <div class="col-md-6">
+        <div class="box box-solid box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Reviewed Activities</h3>    
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="box-body no-padding">
+            <table class="table table-striped">
+              <tr>
+                <th>Date</th>
+                <th class="text-center">No. of Claims</th>
+                <th class="text-right">Amount</th>
+              </tr>
+              <tr>
+                <td>12/09/3487</td>
+                <td class="text-center">15</td>
+                <td class="text-right">$1200.00</td>
+              </tr>
+              <tr>
+                <td>87/76/0987</td>
+                <td class="text-center">28</td>
+                <td class="text-right">$24,813.53</td>
+              </tr>
+              <tr>
+                <td>87/76/8753</td>
+                <td class="text-center">234</td>
+                <td class="text-right">$10,390.90</td>
+              </tr>
+              <tr>
+                <td>10/09/7653</td>
+                <td class="text-center">56</td>
+                <td class="text-right">$35,210.43</td>
+              </tr>
+              <tr>
+                <td>12/09/3487</td>
+                <td class="text-center">15</td>
+                <td class="text-right">$1200.00</td>
+              </tr>
+              <tr>
+                <td>87/76/0987</td>
+                <td class="text-center">28</td>
+                <td class="text-right">$24,813.53</td>
+              </tr>
+              <tr>
+                <td>87/76/8753</td>
+                <td class="text-center">234</td>
+                <td class="text-right">$10,390.90</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <!-- USERS LIST -->
+        <div class="box box-solid box-default">
+            <div class="box-header with-border">
+              <h3 class="box-title">Latest Members</h3>
+  
+              <div class="box-tools pull-right">
+                <span class="label label-info">8 New Members</span>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <ul class="users-list clearfix">
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">Alexander Pierce</a>
+                  <span class="users-list-date">Today</span>
+                </li>
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">Norman</a>
+                  <span class="users-list-date">Yesterday</span>
+                </li>
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">Jane</a>
+                  <span class="users-list-date">12 Jan</span>
+                </li>
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">John</a>
+                  <span class="users-list-date">12 Jan</span>
+                </li>
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">Alexander</a>
+                  <span class="users-list-date">13 Jan</span>
+                </li>
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">Sarah</a>
+                  <span class="users-list-date">14 Jan</span>
+                </li>
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">Nora</a>
+                  <span class="users-list-date">15 Jan</span>
+                </li>
+                <li>
+                  <img src="../../dist/img/user1-128x128.png" alt="User Image">
+                  <a class="users-list-name" href="#">Nadia</a>
+                  <span class="users-list-date">15 Jan</span>
+                </li>
+              </ul>
+              <!-- /.users-list -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer text-center">
+              <a href="javascript:void(0)" class="uppercase">View All Users</a>
+            </div>
+            <!-- /.box-footer -->
+          </div>
+      </div>
+      <div class="col-md-8">
+          <div class="box box-solid box-default">
+            <div class="box-header with-border">
+              <h3 class="box-title">System Task</h3>  
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body no-padding">
+              <table class="table table-striped">
+                <tr>
+                  <th>Name</th>
+                  <th class="text-center">Status</th>
+                  <th>Start</th>
+                  <th>End</th>
+                </tr>
+                <tr>
+                  <td>Reminder Mailer</td>
+                  <td class="text-center"><span class="label label-success">Done</span></td>
+                  <td>12/09/3487 00:00:00</td>
+                  <td>12/09/3487 00:00:00</td>
+                </tr>
+                <tr>
+                  <td>Backup</td>
+                  <td class="text-center"><span class="label label-danger">Stopped</span></td>
+                  <td>87/76/0987 00:00:00</td>
+                  <td>87/76/0987 00:00:00</td>
+                </tr>
+                <tr>
+                  <td>Clear Sessions</td>
+                  <td class="text-center"><span class="label label-success">Done</span></td>
+                  <td>87/76/8753 00:00:00</td>
+                  <td>87/76/8753 00:00:00</td>
+                </tr>
+                <tr>
+                  <td>Issue Reporter</td>
+                  <td class="text-center"><span class="label label-success">Done</span></td>
+                  <td>10/09/7653 00:00:00</td>
+                  <td>10/09/7653 00:00:00</td>
+                </tr>
+                <tr>
+                  <td>Notfication Push</td>
+                  <td class="text-center"><span class="label label-default">Processing</span></td>
+                  <td>12/09/3487 00:00:00</td>
+                  <td>12/09/3487 00:00:00</td>
+                </tr>
+                <tr>
+                  <td>Activation Mailer</td>
+                  <td class="text-center"><span class="label label-default">Processing</span></td>
+                  <td>87/76/0987 00:00:00</td>
+                  <td>87/76/0987 00:00:00</td>
+                </tr>
+                <tr>
+                  <td>Announcement Mailer</td>
+                  <td class="text-center"><span class="label label-danger">Stopped</span></td>
+                  <td>87/76/8753 00:00:00</td>
+                  <td>87/76/8753 00:00:00</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box box-solid box-default">
+          <div class="box-header with-border">
+            <h3 class="box-title">Disk Space</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="canvas-holder">
+              <canvas id="pie-chart-area"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box box-solid box-default">
+          <div class="box-header with-border">
+            <h3 class="box-title">Server Information</h3>
+          </div>
+          <div class="box-body">
+            <dl class="dl-horizontal">
+              <dt>Server Name</dt>
+              <dd>YHGF56444U8IU7</dd>
+              <dt>IP Address</dt>
+              <dd>0.0.0.0</dd>
+              <dt>Up Time</dt>
+              <dd>1year 9months 3weeks 6days</dd>
+              <dt>Time Zone</dt>
+              <dd>UTC</dd>
+              <dt>Hardware Details</dt>
+              <dd>Intel Quad Core 3.02Ghz, 16GB Memory, 1MB Cache, 1TB SSD</dd>
+              <dt>Platform</dt>
+              <dd>RedHat Linux 8.0 RHEL</dd>
+              <dt>Web Server</dt>
+              <dd>Apache 2.0.1</dd>
+              <dt>Web Application</dt>
+              <dd>PHP 7.0 Stable release</dd>
+              <dt>Database</dt>
+              <dd>MySQL 5.3.84</dd>
+              <dt>Cache Server</dt>
+              <dd>Redis 10.0.1</dd>
+              <dt>Framework</dt>
+              <dd>Laravel 5.0</dd>
+              <dt>Mail Server</dt>
+              <dd>IMAP 4.0</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">      
+      <div class="col-md-6">
+        <div class="box box-solid box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Claims by Category</h3>
+            <div class="box-tools pull-right">
+              <button type="button" data-toggle="modal" data-target="#modal-filter" class="btn btn-box-tool"><i class="fa fa-filter"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="canvas-holder">
+              <canvas id="donut-chart-area"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <div class="box box-solid box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Claims per Month</h3>
+              <div class="box-tools pull-right">
+                <button type="button" data-toggle="modal" data-target="#modal-filter" class="btn btn-box-tool"><i class="fa fa-filter"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div id="canvas-holder">
+                <canvas id="line-chart-area"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="callout callout-info">
+        <h4><i class="icon fa fa-info fa-fw"></i>Information</h4>
+        <p><big>Approved</big> status is to indicate result of claim submitted by staff. At this stage Payment or Online Money Transfer not yet initiated.</p>
+        <p><big>Paid</big> staus is to inform staff; that Payment or Online Money Transfer to be initiated for particular claim. It will take atleast 4-7 working days for banks to complete online transaction from the day claim updated to <big>Paid</big> status.</p>
+      </div>
+      <div class="box">
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                </tr>
+                <tr>
+                    <td>Brielle Williamson</td>
+                    <td>Integration Specialist</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2012/12/02</td>
+                    <td>$372,000</td>
+                </tr>
+                <tr>
+                    <td>Herrod Chandler</td>
+                    <td>Sales Assistant</td>
+                    <td>San Francisco</td>
+                    <td>59</td>
+                    <td>2012/08/06</td>
+                    <td>$137,500</td>
+                </tr>
+                <tr>
+                    <td>Rhona Davidson</td>
+                    <td>Integration Specialist</td>
+                    <td>Tokyo</td>
+                    <td>55</td>
+                    <td>2010/10/14</td>
+                    <td>$327,900</td>
+                </tr>
+                <tr>
+                    <td>Colleen Hurst</td>
+                    <td>Javascript Developer</td>
+                    <td>San Francisco</td>
+                    <td>39</td>
+                    <td>2009/09/15</td>
+                    <td>$205,500</td>
+                </tr>
+                <tr>
+                    <td>Sonya Frost</td>
+                    <td>Software Engineer</td>
+                    <td>Edinburgh</td>
+                    <td>23</td>
+                    <td>2008/12/13</td>
+                    <td>$103,600</td>
+                </tr>
+                <tr>
+                    <td>Jena Gaines</td>
+                    <td>Office Manager</td>
+                    <td>London</td>
+                    <td>30</td>
+                    <td>2008/12/19</td>
+                    <td>$90,560</td>
+                </tr>
+                <tr>
+                    <td>Quinn Flynn</td>
+                    <td>Support Lead</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2013/03/03</td>
+                    <td>$342,000</td>
+                </tr>
+                <tr>
+                    <td>Charde Marshall</td>
+                    <td>Regional Director</td>
+                    <td>San Francisco</td>
+                    <td>36</td>
+                    <td>2008/10/16</td>
+                    <td>$470,600</td>
+                </tr>
+                <tr>
+                    <td>Haley Kennedy</td>
+                    <td>Senior Marketing Designer</td>
+                    <td>London</td>
+                    <td>43</td>
+                    <td>2012/12/18</td>
+                    <td>$313,500</td>
+                </tr>
+                <tr>
+                    <td>Tatyana Fitzpatrick</td>
+                    <td>Regional Director</td>
+                    <td>London</td>
+                    <td>19</td>
+                    <td>2010/03/17</td>
+                    <td>$385,750</td>
+                </tr>
+                <tr>
+                    <td>Michael Silva</td>
+                    <td>Marketing Designer</td>
+                    <td>London</td>
+                    <td>66</td>
+                    <td>2012/11/27</td>
+                    <td>$198,500</td>
+                </tr>
+                <tr>
+                    <td>Paul Byrd</td>
+                    <td>Chief Financial Officer (CFO)</td>
+                    <td>New York</td>
+                    <td>64</td>
+                    <td>2010/06/09</td>
+                    <td>$725,000</td>
+                </tr>
+                <tr>
+                    <td>Gloria Little</td>
+                    <td>Systems Administrator</td>
+                    <td>New York</td>
+                    <td>59</td>
+                    <td>2009/04/10</td>
+                    <td>$237,500</td>
+                </tr>
+                <tr>
+                    <td>Bradley Greer</td>
+                    <td>Software Engineer</td>
+                    <td>London</td>
+                    <td>41</td>
+                    <td>2012/10/13</td>
+                    <td>$132,000</td>
+                </tr>
+                <tr>
+                    <td>Dai Rios</td>
+                    <td>Personnel Lead</td>
+                    <td>Edinburgh</td>
+                    <td>35</td>
+                    <td>2012/09/26</td>
+                    <td>$217,500</td>
+                </tr>
+                <tr>
+                    <td>Jenette Caldwell</td>
+                    <td>Development Lead</td>
+                    <td>New York</td>
+                    <td>30</td>
+                    <td>2011/09/03</td>
+                    <td>$345,000</td>
+                </tr>
+                <tr>
+                    <td>Yuri Berry</td>
+                    <td>Chief Marketing Officer (CMO)</td>
+                    <td>New York</td>
+                    <td>40</td>
+                    <td>2009/06/25</td>
+                    <td>$675,000</td>
+                </tr>
+                <tr>
+                    <td>Caesar Vance</td>
+                    <td>Pre-Sales Support</td>
+                    <td>New York</td>
+                    <td>21</td>
+                    <td>2011/12/12</td>
+                    <td>$106,450</td>
+                </tr>
+                <tr>
+                    <td>Doris Wilder</td>
+                    <td>Sales Assistant</td>
+                    <td>Sidney</td>
+                    <td>23</td>
+                    <td>2010/09/20</td>
+                    <td>$85,600</td>
+                </tr>
+                <tr>
+                    <td>Angelica Ramos</td>
+                    <td>Chief Executive Officer (CEO)</td>
+                    <td>London</td>
+                    <td>47</td>
+                    <td>2009/10/09</td>
+                    <td>$1,200,000</td>
+                </tr>
+                <tr>
+                    <td>Gavin Joyce</td>
+                    <td>Developer</td>
+                    <td>Edinburgh</td>
+                    <td>42</td>
+                    <td>2010/12/22</td>
+                    <td>$92,575</td>
+                </tr>
+                <tr>
+                    <td>Jennifer Chang</td>
+                    <td>Regional Director</td>
+                    <td>Singapore</td>
+                    <td>28</td>
+                    <td>2010/11/14</td>
+                    <td>$357,650</td>
+                </tr>
+                <tr>
+                    <td>Brenden Wagner</td>
+                    <td>Software Engineer</td>
+                    <td>San Francisco</td>
+                    <td>28</td>
+                    <td>2011/06/07</td>
+                    <td>$206,850</td>
+                </tr>
+                <tr>
+                    <td>Fiona Green</td>
+                    <td>Chief Operating Officer (COO)</td>
+                    <td>San Francisco</td>
+                    <td>48</td>
+                    <td>2010/03/11</td>
+                    <td>$850,000</td>
+                </tr>
+                <tr>
+                    <td>Shou Itou</td>
+                    <td>Regional Marketing</td>
+                    <td>Tokyo</td>
+                    <td>20</td>
+                    <td>2011/08/14</td>
+                    <td>$163,000</td>
+                </tr>
+                <tr>
+                    <td>Michelle House</td>
+                    <td>Integration Specialist</td>
+                    <td>Sidney</td>
+                    <td>37</td>
+                    <td>2011/06/02</td>
+                    <td>$95,400</td>
+                </tr>
+                <tr>
+                    <td>Suki Burks</td>
+                    <td>Developer</td>
+                    <td>London</td>
+                    <td>53</td>
+                    <td>2009/10/22</td>
+                    <td>$114,500</td>
+                </tr>
+                <tr>
+                    <td>Prescott Bartlett</td>
+                    <td>Technical Author</td>
+                    <td>London</td>
+                    <td>27</td>
+                    <td>2011/05/07</td>
+                    <td>$145,000</td>
+                </tr>
+                <tr>
+                    <td>Gavin Cortez</td>
+                    <td>Team Leader</td>
+                    <td>San Francisco</td>
+                    <td>22</td>
+                    <td>2008/10/26</td>
+                    <td>$235,500</td>
+                </tr>
+                <tr>
+                    <td>Martena Mccray</td>
+                    <td>Post-Sales support</td>
+                    <td>Edinburgh</td>
+                    <td>46</td>
+                    <td>2011/03/09</td>
+                    <td>$324,050</td>
+                </tr>
+                <tr>
+                    <td>Unity Butler</td>
+                    <td>Marketing Designer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009/12/09</td>
+                    <td>$85,675</td>
+                </tr>
+                <tr>
+                    <td>Howard Hatfield</td>
+                    <td>Office Manager</td>
+                    <td>San Francisco</td>
+                    <td>51</td>
+                    <td>2008/12/16</td>
+                    <td>$164,500</td>
+                </tr>
+                <tr>
+                    <td>Hope Fuentes</td>
+                    <td>Secretary</td>
+                    <td>San Francisco</td>
+                    <td>41</td>
+                    <td>2010/02/12</td>
+                    <td>$109,850</td>
+                </tr>
+                <tr>
+                    <td>Vivian Harrell</td>
+                    <td>Financial Controller</td>
+                    <td>San Francisco</td>
+                    <td>62</td>
+                    <td>2009/02/14</td>
+                    <td>$452,500</td>
+                </tr>
+                <tr>
+                    <td>Timothy Mooney</td>
+                    <td>Office Manager</td>
+                    <td>London</td>
+                    <td>37</td>
+                    <td>2008/12/11</td>
+                    <td>$136,200</td>
+                </tr>
+                <tr>
+                    <td>Jackson Bradshaw</td>
+                    <td>Director</td>
+                    <td>New York</td>
+                    <td>65</td>
+                    <td>2008/09/26</td>
+                    <td>$645,750</td>
+                </tr>
+                <tr>
+                    <td>Olivia Liang</td>
+                    <td>Support Engineer</td>
+                    <td>Singapore</td>
+                    <td>64</td>
+                    <td>2011/02/03</td>
+                    <td>$234,500</td>
+                </tr>
+                <tr>
+                    <td>Bruno Nash</td>
+                    <td>Software Engineer</td>
+                    <td>London</td>
+                    <td>38</td>
+                    <td>2011/05/03</td>
+                    <td>$163,500</td>
+                </tr>
+                <tr>
+                    <td>Sakura Yamamoto</td>
+                    <td>Support Engineer</td>
+                    <td>Tokyo</td>
+                    <td>37</td>
+                    <td>2009/08/19</td>
+                    <td>$139,575</td>
+                </tr>
+                <tr>
+                    <td>Thor Walton</td>
+                    <td>Developer</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2013/08/11</td>
+                    <td>$98,540</td>
+                </tr>
+                <tr>
+                    <td>Finn Camacho</td>
+                    <td>Support Engineer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009/07/07</td>
+                    <td>$87,500</td>
+                </tr>
+                <tr>
+                    <td>Serge Baldwin</td>
+                    <td>Data Coordinator</td>
+                    <td>Singapore</td>
+                    <td>64</td>
+                    <td>2012/04/09</td>
+                    <td>$138,575</td>
+                </tr>
+                <tr>
+                    <td>Zenaida Frank</td>
+                    <td>Software Engineer</td>
+                    <td>New York</td>
+                    <td>63</td>
+                    <td>2010/01/04</td>
+                    <td>$125,250</td>
+                </tr>
+                <tr>
+                    <td>Zorita Serrano</td>
+                    <td>Software Engineer</td>
+                    <td>San Francisco</td>
+                    <td>56</td>
+                    <td>2012/06/01</td>
+                    <td>$115,000</td>
+                </tr>
+                <tr>
+                    <td>Jennifer Acosta</td>
+                    <td>Junior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>43</td>
+                    <td>2013/02/01</td>
+                    <td>$75,650</td>
+                </tr>
+                <tr>
+                    <td>Cara Stevens</td>
+                    <td>Sales Assistant</td>
+                    <td>New York</td>
+                    <td>46</td>
+                    <td>2011/12/06</td>
+                    <td>$145,600</td>
+                </tr>
+                <tr>
+                    <td>Hermione Butler</td>
+                    <td>Regional Director</td>
+                    <td>London</td>
+                    <td>47</td>
+                    <td>2011/03/21</td>
+                    <td>$356,250</td>
+                </tr>
+                <tr>
+                    <td>Lael Greer</td>
+                    <td>Systems Administrator</td>
+                    <td>London</td>
+                    <td>21</td>
+                    <td>2009/02/27</td>
+                    <td>$103,500</td>
+                </tr>
+                <tr>
+                    <td>Jonas Alexander</td>
+                    <td>Developer</td>
+                    <td>San Francisco</td>
+                    <td>30</td>
+                    <td>2010/07/14</td>
+                    <td>$86,500</td>
+                </tr>
+                <tr>
+                    <td>Shad Decker</td>
+                    <td>Regional Director</td>
+                    <td>Edinburgh</td>
+                    <td>51</td>
+                    <td>2008/11/13</td>
+                    <td>$183,000</td>
+                </tr>
+                <tr>
+                    <td>Michael Bruce</td>
+                    <td>Javascript Developer</td>
+                    <td>Singapore</td>
+                    <td>29</td>
+                    <td>2011/06/27</td>
+                    <td>$183,000</td>
+                </tr>
+                <tr>
+                    <td>Donna Snider</td>
+                    <td>Customer Support</td>
+                    <td>New York</td>
+                    <td>27</td>
+                    <td>2011/01/25</td>
+                    <td>$112,000</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <div class="modal fade" id="modal-filter">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times"></i>
+          </button>
+          <h4 class="modal-title"><i class="fa fa-filter fa-lg fa-fw"></i>Filter</h4>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm" method="post" class="form-horizontal">
+            <div class="form-group">
+              <label class="col-xs-4 control-label">Team</label>
+              <div class="col-xs-8">
+                <select class="form-control select2" multiple="multiple" data-placeholder="-- Select --" style="width: 100%;">
+                  <option>HR</option>
+                  <option>Finance</option>
+                  <option>Marketing</option>
+                  <option>Sales</option>
+                  <option>Legal</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-xs-4 control-label">Department</label>
+              <div class="col-xs-8">
+                <select class="form-control select2" multiple="multiple" data-placeholder="-- Select --" style="width: 100%;">
+                  <option>HR</option>
+                  <option>Finance</option>
+                  <option>Marketing</option>
+                  <option>Sales</option>
+                  <option>Legal</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-xs-4 control-label">Designation</label>
+              <div class="col-xs-8">
+                <select class="form-control select2" multiple="multiple" data-placeholder="-- Select --" style="width: 100%;">
+                  <option>Manager</option>
+                  <option>Staff</option>
+                  <option>Employee</option>
+                  <option>Worker</option>
+                  <option>Assistant</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-xs-4 control-label">Role</label>
+              <div class="col-xs-8">
+                <select class="form-control select2" multiple="multiple" data-placeholder="-- Select --" style="width: 100%;">
+                  <option>Admin</option>
+                  <option>User</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-xs-4 control-label">Staff</label>
+              <div class="col-xs-8">
+                <select class="form-control select2" multiple="multiple" data-placeholder="-- Select --" style="width: 100%;">
+                  <option>Name 1</option>
+                  <option>Name 2</option>
+                  <option>Name 3</option> 
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-xs-4 control-label">Date Range</label>
+              <div class='col-xs-4'>
+                <input type='text' class="form-control" id='datetimepicker6' />
+              </div>
+              <div class='col-xs-4'>
+                <input type='text' class="form-control" id='datetimepicker7' />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2013-2018 <a href="#" class="text-black">Mazin Softwares</a>.</strong> All rights reserved.
+  </footer>  
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
+<!-- Moment -->
+<script src="../../plugins/moment/moment.min.js"></script>
+<!-- Datetimepicker 4.14.47 -->
+<script src="../../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../../plugins/datatable/datatables.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.js"></script>
+<!-- ChartJs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<!-- Bootbox -->
+<script src="../../plugins/bootbox/bootbox.min.js"></script>
+<!-- Fileinput -->
+<script src="../../plugins/fileinput/js/fileinput.min.js"></script>
+<script>
+  $(function () {
+    var ctx = "donut-chart-area";
+    var ctx1 = "line-chart-area";
+    var ctx2 = "pie-chart-area";
+    data = {
+      datasets: [{
+        data: [45, 25, 20, 10, 30, 45, 25, 20, 10, 30],
+        backgroundColor: [
+          '#f56954',
+          '#00a65a',
+          '#f39c12',
+          '#00c0ef',
+          '#3c8dbc',
+          '#d2d6de',
+          '#ff6384',
+          '#36a2eb',
+          '#cc65fe',
+          '#ffce56',
+          '#c842f4',
+          '#f4bb41',
+        ]
+      }],
+      labels: [
+          'One',
+          'Two',
+          'Three',
+          'Fourrrrrrrrrrrrrrrrr',
+          'Five',
+          'Six',
+          'Seven',
+          'Eight',
+          'Nine',
+          'Ten',
+      ]
+    };
+    options = {
+      legend: {
+        display: true,
+        position: 'right',
+        labels: {
+          boxWidth: 15,
+          fontColor: 'black',
+          fontSize: 14,
+          fontStyle: 'bold',
+        }
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      },
+      tooltips: {
+        callbacks: {
+          title: function(tooltipItem, data) {
+            return data.labels[tooltipItem[0].index];
+          },
+          label: function(tooltipItem, data) {
+            //get the concerned dataset
+            var dataset = data.datasets[tooltipItem.datasetIndex];
+            //calculate the total of this data set
+            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+              return previousValue + currentValue;
+            });
+            //get the current items value
+            var currentValue = dataset.data[tooltipItem.index];
+            //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+            var precentage = Math.floor(((currentValue/total) * 100)+0.5);
+
+            return precentage + "%";
+          }
+        }
+      } 
+    };
+    data1 = {
+      datasets: [
+        {
+          label: "My First dataset",
+          backgroundColor: '#41caf4',
+          borderColor: '#36a2eb',
+          fill: false,
+          data: [45, 25, 20, 10, 30, 45, 25, 20, 10, 30, 65, 25],
+        },
+        {
+          label: "My Second dataset",
+          backgroundColor: '#5b8c3a',
+          borderColor: '#00a65a',
+          fill: false,
+          data: [25, 20, 10, 30, 65, 25, 45, 25, 20, 10, 30, 45],
+        }
+      ],
+      labels: [
+          'JAN',
+          'FEB',
+          'MAR',
+          'APR',
+          'MAY',
+          'JUN',
+          'JUL',
+          'AUG',
+          'SEP',
+          'OCT',
+          'NOV',
+          'DEC',
+      ]
+    };
+    options1 = {
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          boxWidth: 15,
+          fontColor: 'black',
+          fontSize: 14,
+          fontStyle: 'bold',
+        }
+      },
+      scales: {
+        xAxes: [{
+          gridLines: {
+            display:false
+          }
+        }],
+        yAxes: [{
+          gridLines: {
+            display:false
+          }   
+        }]
+      }
+    };
+    data2 = {
+      datasets: [{
+        data: [45, 25, 20, 10],
+        backgroundColor: [
+          '#f56954',
+          '#00a65a',
+          '#f39c12',
+          '#00c0ef',
+        ]
+      }],
+      labels: [
+          'Database',
+          'Backup Files',
+          'Media / Attachments',
+          'Free Space',
+      ]
+    };
+    options2 = {
+      legend: {
+        display: true,
+        position: 'right',
+        labels: {
+          boxWidth: 15,
+          fontColor: 'black',
+          fontSize: 14,
+          fontStyle: 'bold',
+        }
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      },
+      tooltips: {
+        callbacks: {
+          title: function(tooltipItem, data) {
+            return data.labels[tooltipItem[0].index];
+          },
+          label: function(tooltipItem, data) {
+            //get the concerned dataset
+            var dataset = data.datasets[tooltipItem.datasetIndex];
+            //calculate the total of this data set
+            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+              return previousValue + currentValue;
+            });
+            //get the current items value
+            var currentValue = dataset.data[tooltipItem.index];
+            //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+            var precentage = Math.floor(((currentValue/total) * 100)+0.5);
+
+            return precentage + "%";
+          }
+        }
+      } 
+    };
+    var myDoughnutChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: options
+    });
+    var myLineChart = new Chart(ctx1, {
+      type: 'line',
+      data: data1,
+      options: options1
+    });
+    var myPieChart = new Chart(ctx2, {
+      type: 'pie',
+      data: data2,
+      options: options2
+    });
+    $(".select2").select2();
+    $('#datetimepicker6').datetimepicker({
+      format: 'DD/MM/YYYY hh:mm',
+      dayViewHeaderFormat: 'MMMM YYYY',
+      minDate: moment().subtract(2, 'years'),
+      maxDate: moment(),
+      sideBySide: true,
+      showTodayButton: true,
+      showClear: true,
+      showClose: true
+    });
+    $('#datetimepicker7').datetimepicker({
+      useCurrent: false, //Important! See issue #1075
+      format: 'DD/MM/YYYY hh:mm',
+      dayViewHeaderFormat: 'MMMM YYYY',
+      sideBySide: true,
+      showTodayButton: true,
+      showClear: true,
+      showClose: true
+    });
+    $("#datetimepicker6").on("dp.change", function (e) {
+      $('#datetimepicker7').data("DateTimePicker").minDate(e.date).maxDate(moment());
+    });
+    $('#datetimepicker6,#datetimepicker7').bind("keydown cut copy paste",function(e) {
+      e.preventDefault();
+    });
+    var columnsearch = '';
+    $('#example thead th').each( function () {
+      var title = $(this).text();
+      columnsearch += '<td><div class="input-group input-group-sm"><input type="text" style="width:100%;" placeholder="Search '+title+'" class="form-control"><span class="input-group-btn"><button type="button" class="btn btn-default btn-flat clearfilter"><i class="fa fa-times-circle"></i></button></span></div></td>';
+    });
+    $('#example thead').append('<tr class="filter-row">'+columnsearch+'</tr>');
+    var table = $('#example').DataTable({
+      "dom": '<"box-header with-border"<"boxtitle"><"datatable-box-tools"B>><"box-body"t><"box-footer"<"pull-left"i><"pull-right"p>>',
+      lengthMenu: [
+        [ 10, 25, 50, -1 ],
+        [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+      ],
+      orderCellsTop: true,
+      buttons: [
+        {
+          text: '<i class="fa fa-plus fa-lg fa-fw text-primary"></i>Create',
+          titleAttr: 'Add New',
+          className: 'btn btn-sm',
+          action: function ( e, dt, node, config ) {            
+          }
+        },
+        {
+          text: '<i class="fa fa-folder-open fa-lg fa-fw text-primary"></i>View',
+          titleAttr: 'Open',
+          className: 'btn btn-sm',
+          action: function ( e, dt, node, config ) {            
+          }
+        },
+        {
+          text: '<i class="fa fa-edit fa-lg fa-fw text-primary"></i>Edit',
+          titleAttr: 'Update / Modify',
+          className: 'btn btn-sm',
+          action: function ( e, dt, node, config ) {            
+          }
+        },
+        {
+          extend: 'collection',
+          text: '<i class="fa fa-ticket fa-lg fa-fw text-primary"></i>Selection',
+          className: 'btn btn-sm',
+          autoClose: true,
+          buttons: [
+            {
+              text: '<i class="fa fa-toggle-on fa-lg fa-fw text-primary"></i>Enable',
+              titleAttr: 'Activate / On',
+              className: 'btn-sm',
+              action: function ( e, dt, node, config ) {            
+              }
+            },
+            {
+              text: '<i class="fa fa-toggle-off fa-lg fa-fw text-primary"></i>Disable',
+              titleAttr: 'Deactivate / off',
+              className: 'btn-sm',
+              action: function ( e, dt, node, config ) {            
+              }
+            },
+            {
+              text: '<i class="fa fa-copy fa-lg fa-fw text-primary"></i>Copy',
+              titleAttr: 'Duplicate',
+              className: 'btn-sm',
+              action: function ( e, dt, node, config ) {            
+              }
+            },
+            {
+              text: '<i class="fa fa-trash fa-lg fa-fw text-primary"></i>Delete',
+              titleAttr: 'Remove',
+              className: 'btn-sm',
+              action: function ( e, dt, node, config ) {
+                bootbox.confirm({
+                  title: '<i class="fa fa-trash fa-lg fa-fw text-danger"></i>Delete',
+                  message: "Are you sure want to Delete?",
+                  buttons: {
+                    confirm: {
+                      label: 'Yes',
+                      className: 'btn-danger'
+                    },
+                    cancel: {
+                      label: 'No',
+                      className: 'btn-default'
+                    }
+                  },
+                  callback: function (result) {
+                    console.log('This was logged in the bootbox callback: ' + result);
+                  }
+                });
+              }
+            }
+          ]
+        },
+        {
+          extend:    'colvis',
+          text:      '<i class="fa fa-columns fa-lg fa-fw text-primary"></i>Columns',
+          titleAttr: 'Show/Hide Column(s)',
+          className: 'btn btn-sm',
+          autoClose: true,
+        },
+        {
+          extend:    'pageLength',
+          titleAttr: 'Rows per Page',
+          className: 'btn btn-sm',
+          autoClose: true,
+        },
+        {
+          extend: 'collection',
+          text: '<i class="fa fa-download fa-lg fa-fw text-primary"></i>Export',
+          className: 'btn btn-sm',
+          autoClose: true,
+          buttons: [
+            {
+              extend:    'excelHtml5',
+              exportOptions: {
+                columns: ':visible'
+              },
+              text: '<i class="fa fa-file-excel-o fa-fw fa-lg text-primary"></i>Excel',
+              titleAttr: 'Excel',
+              className: 'btn-sm'
+            },
+            {
+              extend: 'csvHtml5',
+              exportOptions: {
+                columns: ':visible'
+              },
+              text: '<i class="fa fa-file-text-o fa-fw fa-lg text-primary"></i>CSV',
+              titleAttr: 'CSV',
+              className: 'btn-sm'
+            },
+            {
+              extend: 'pdfHtml5',
+              exportOptions: {
+                columns: ':visible'
+              },
+              orientation: 'landscape',
+              pageSize: 'A4',
+              title: 'eClaim - Summary',
+              /* message: 'downloaded on '+moment().format("DD-MM-YYYY h:mm A"), */
+              text: '<i class="fa fa-file-pdf-o fa-fw fa-lg text-primary"></i>PDF',
+              titleAttr: 'PDF',
+              className: 'btn-sm'
+            }/* ,
+            {
+              extend: 'print',
+              exportOptions: {
+                columns: ':visible'
+              },
+              text: '<i class="fa fa-print fa-fw fa-lg text-primary"></i>Print',
+              titleAttr: 'Print',
+              className: 'btn-sm'
+            } */
+          ]
+        },
+        {
+          text: '<i class="fa fa-upload fa-lg fa-fw text-primary"></i>Import',
+          titleAttr: 'Bulk Upload',
+          className: 'btn btn-sm',
+          action: function ( e, dt, node, config ) {
+            var dialog = bootbox.dialog({
+              title: '<i class="fa fa-upload fa-lg fa-fw text-info"></i>Import Template',
+              message: '<div class="form-group"><label for="importtemplate">File input</label><input type="file" id="importtemplate"><p class="help-block">Note: Only *.csv file allowed. Please do not change first line of template.</p></div><div class="form-group"><button type="button" class="btn btn-info btn-block btn-sm"><i class="fa fa-download fa-fw"></i> Download Template</button></div>',
+              buttons: {
+                cancel: {
+                  label: "Cancel",
+                  className: 'btn-default',
+                  callback: function(){
+                      
+                  }
+                },
+                ok: {
+                  label: "Submit",
+                  className: 'btn-primary',
+                  callback: function(){
+                      
+                  }
+                }
+              }
+            });
+            dialog.init(function(){
+              $("#importtemplate").fileinput({
+                showUpload:false,
+                showPreview:false,
+                browseClass:"btn btn-info",
+                removeClass:"btn btn-danger",
+                removeLabel:"",
+                allowedFileExtensions:["csv"],
+                msgPlaceholder: "Select file to import"
+              });
+            });            
+          }
+        }
+      ],
+      language: {
+        buttons: {
+          pageLength:{
+            _: '<i class="fa fa-list fa-fw fa-lg text-primary" aria-hidden="true"></i> %d Rows',
+            '-1': '<i class="fa fa-list fa-fw fa-lg text-primary" aria-hidden="true"></i> Show All'
+          }
+        }
+      }
+    });
+    $("div.boxtitle").html('<h3 class="box-title">Settings Table</h3>');
+    table.columns().every( function () {
+      var that = this;
+      $( 'input', '.filter-row td:nth-child('+(this.index()+1)+')' ).on( 'keyup change', function (e) {
+        if ( that.search() !== this.value && e.keyCode == 13 ) {
+          e.preventDefault();
+          that.search( this.value ).draw();
+        }
+      });
+      $('.clearfilter', '.filter-row td:nth-child('+(this.index()+1)+')').click( function (e) {
+        e.preventDefault();
+        $(this).parent().parent().find("input[type=text]:first").val("");
+        that.search('').draw();
+      });
+    });  
+  });
+</script>
+</body>
+</html>
